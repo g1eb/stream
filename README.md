@@ -20,6 +20,22 @@ Keep track of the file size, just in case:
 watch -n 1 du -sh /path/to/directory
 ```
 
+## NGINX Settings:
+
+```
+location /stream {
+  alias /path/to/stream/;
+
+  types {
+      application/vnd.apple.mpegurl m3u8;
+      video/mp2t ts;
+  }
+
+  add_header Cache-Control no-cache;
+  add_header Access-Control-Allow-Origin *;
+}
+```
+
 ## Dependencies
 
 <a href="https://ffmpeg.org/" target="_blank">https://ffmpeg.org/</a>
