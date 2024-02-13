@@ -46,8 +46,9 @@ ffmpeg \
   -preset veryfast \
   -maxrate "$MAXRATE" \
   -bufsize "$BUFSIZE" \
-  -vf "format=yuv420p" \
+  -vf "format=yuyv422" \
   -g "$GOP" \
   -hls_time "$HLS_TIME" \
+  -hls_list_size 10 \
   -hls_playlist_type event \
   "$OUTPUT"
