@@ -42,7 +42,8 @@ ffmpeg \
   -video_size "$VIDEO_SIZE" \
   -i "0" \
   -r "$FRAMERATE" \
-  -copyts -c:v libx264 \
+  -copyts \
+  -c:v libx264 \
   -preset veryfast \
   -maxrate "$MAXRATE" \
   -bufsize "$BUFSIZE" \
