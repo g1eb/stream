@@ -1,8 +1,8 @@
-# video live stream using FFmpeg
+# 📹 video live stream with FFmpeg
 
 ## Instructions
 
-Run `init_stream.sh` create an hsl stream: using FFmpeg:
+Run `init_stream.sh` create an hsl stream using FFmpeg:
 
 ```console
 ./init_stream.sh -f 30 -s 1920x1080 -m 4000k -b 8000k -g 50 -t 4 -o stream.m3u8
