@@ -2,10 +2,10 @@
 
 ## Instructions
 
-Run FFmpeg to create an hsl stream:
+Run `init_stream.sh` create an hsl stream: using FFmpeg:
 
 ```console
-ffmpeg -f avfoundation -framerate 30 -video_size 2560x1440 -i "0" -r 30 -copyts -c:v libx264 -preset veryfast -maxrate 5000k -bufsize 10000k -vf "format=yuv420p" -g 60 -hls_time 5 -hls_playlist_type event stream.m3u8
+./init_stream.sh -f 30 -s 1920x1080 -m 4000k -b 8000k -g 50 -t 4 -o stream.m3u8
 ```
 
 Run a simple python based http server:
