@@ -45,7 +45,7 @@ ffmpeg \
   -r "$FRAMERATE" \
   -copyts \
   -c:v libx264 \
-  -preset veryfast \
+  -preset ultrafast \
   -maxrate "$MAXRATE" \
   -bufsize "$BUFSIZE" \
   -vf "format=yuyv422" \
