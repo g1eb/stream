@@ -2,11 +2,11 @@
 
 # Display ASCII art when the script is invoked
 cat << "EOF"
- __  __ ____  _____
-|  \/  |  _ \|  _  |
-| |\/| | | | | |_|_|
-| |  | | |_| | |_\_
-|_|  |_|____/|_| \_|
+
+   __|  |  |  \ |   __|  __| __ __|
+ \__ \  |  | .  | \__ \  _|     |
+ ____/ \__/ _|\_| ____/ ___|   _|
+
 EOF
 
 # Default values for variables
