@@ -32,6 +32,9 @@ while getopts "f:s:m:b:g:t:o:" opt; do
   esac
 done
 
+# Remove any files from the previous stream(s)
+rm -rf stream*
+
 # Run FFmpeg with the specified parameters
 ffmpeg \
   -f avfoundation \
