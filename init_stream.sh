@@ -11,7 +11,7 @@ EOF
 
 # Default values for variables
 FRAMERATE=30
-VIDEO_SIZE="3840x2160"
+VIDEO_SIZE="2560x1440"
 MAXRATE="15M"
 BUFSIZE="10M"
 GOP=60
@@ -44,13 +44,13 @@ ffmpeg \
   -i "0" \
   -r "$FRAMERATE" \
   -copyts \
-  -c:v libx264 \
-  -preset ultrafast \
+  -c:v h264 \
+  -preset:v ultrafast \
   -maxrate "$MAXRATE" \
   -bufsize "$BUFSIZE" \
-  -vf "format=yuyv422" \
   -g "$GOP" \
   -hls_time "$HLS_TIME" \
   -hls_list_size 10 \
   -hls_playlist_type event \
+  -thread_queue_size 32768 \
   "$OUTPUT"
