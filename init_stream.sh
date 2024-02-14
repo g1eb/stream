@@ -33,7 +33,7 @@ while getopts "f:s:m:b:g:t:o:" opt; do
 done
 
 # Remove any files from the previous stream(s)
-echo "Removing any old stream files..\n\n"
+echo "Removing any old stream files.."
 rm -rf stream*
 
 # Run FFmpeg with the specified parameters
