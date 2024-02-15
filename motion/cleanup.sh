@@ -10,4 +10,4 @@ MAX_AGE_MINUTES=15
 find "$TARGET_DIR" -type f -name '*.mkv' -mmin +$MAX_AGE_MINUTES -exec rm -f {} \;
 
 # TODO: Setup a cronjob to run this cleanup script
-# */30 * * * * /etc/motion/cleanup.sh
+# */5 * * * * /etc/motion/cleanup.sh
